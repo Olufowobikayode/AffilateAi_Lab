@@ -1,10 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/backend/api/$1"
-    }
-  ],
   "builds": [
     {
       "src": "frontend/package.json",
@@ -15,10 +9,7 @@
     },
     {
       "src": "backend/src/index.ts",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["backend/dist/**"]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
