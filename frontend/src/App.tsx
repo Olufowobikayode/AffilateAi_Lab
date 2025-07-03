@@ -28,7 +28,7 @@ function App() {
     setOptimizationResults(null);
 
     try {
-      const response = await fetch('http://localhost:3000/api/optimization/analyze', {
+      const response = await fetch('/api/optimization/analyze', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ function App() {
     setGeneratedContent(null);
 
     try {
-      const response = await fetch('http://localhost:3000/api/content/generate', {
+      const response = await fetch('/api/content/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ function App() {
     setTrendFusionResults(null);
 
     try {
-      const response = await fetch('http://localhost:3000/api/trends/fusion', {
+      const response = await fetch('/api/trends/fusion', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ function App() {
     formData.append('image', selectedFile);
 
     try {
-      const response = await fetch('http://localhost:3000/api/images/upload', {
+      const response = await fetch('/api/images/upload', {
         method: 'POST',
         body: formData,
       });
